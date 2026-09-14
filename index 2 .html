@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>payment form</title>
+    <link rel="stylesheet" href="">
+    <style>
+      h1{
+        text-align: center;
+        background: black;
+        color: white;
+        padding:10px;
+        border:2px solid black;
+        border-radius:5px;
+        text-transform: uppercase;
+      
+      }
+      h2{
+        text-transform: uppercase;
+        background: yellow ;
+        
+        padding: 5px;
+        border: 2px solid black;
+      }
+    button{
+      background: black ;
+      color: white;
+      height:30px;
+      width:70px;
+    }
+  
+    }
+  
+    body{
+      font-family:;
+      margin:15px 30px;
+      font-size:15px;
+      padding:8px;
+    }
+ .container{
+      background:#f3f3f3;
+      border:2px solid black;
+      padding:10px;
+ }
+ input[type="password"],
+    input[type="text"],
+    input[type="email"],
+    input[type="number"],
+    input[type="date"],
+    select,
+    textarea{
+      width:100%px;
+      border:1px solid black ;
+      border-radius:4px;
+      margin:5px;
+      padding:10px;
+overflow:hidden;
+    }
+    fieldset{
+      background:#fff;
+    }
+    input[type="submit"]{
+      background-color:green;
+      border:none;
+      color: white ;
+      width:100%;
+      height:50px;
+      padding:2px ;
+      font-size:30px;
+      font-weight:bold;
+    }
+      
+    </style>
+</head>
+<body>
+    <div class="container">
+
+<form action="">
+  
+
+  <h1>payment form </h1>
+
+  <h2>contact information</h2>
+
+  <p>Name: * <input type="text" name="name" placeholder="Enter your name" required></p>
+  <fieldset>
+    <legend>Gender * 
+    </legend>
+   <input type="radio" value="male" name="Gender" id="male" required>male
+   <input type="radio" value="female" name="Gender" id="female" required>female 
+  </fieldset>
+  <br><br>
+  Address: <textarea name="address" id="address" placeholder="Enter your address" cols="30"rows="3"></textarea>
+  <br><br>
+  email: *<input type="email" name="email" id="email" placeholder=" Enter your email" required>
+  <br><br>
+  Pincode: * <input type="number" name="pincode" id="pincode" placeholder="Enter pincode" required>
+  <br><br>
+  <hr>
+  <h2>payment information </h2>
+  Card type:*
+  <select name="Card type" id="Card type" required>Card type
+  <option value="">--select a card type-- </option>
+  <option>visa</option>
+  <option>rupay</option>
+  <option>master card</option>
+  Card number:*
+  </select> 
+  <br><br>
+  Card number:<input type="number" name="card number" id="card number" placeholder="Enter card number" required>
+  <br><br>
+  Expiration date : *<input type="date" name="expiration date" id="expiration date" required>
+  <br><br>
+  CVV:* <input type="password" name="CVV" id="CVV" required>
+  <br><br>
+  <input type="submit" value="pay now" id="pay">
+  
+  
+</form>
+  </div>
+  <script>
+let form = document.querySelector("form");
+
+form.addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    if (form.checkValidity()) {
+        window.location.href = "success.html";
+    } else {
+        form.reportValidity();
+    }
+});
+</script>
+</body>
+</html>

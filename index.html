@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>login</title>
+  <style>
+  .abc{
+    
+    align-items:center;
+    border:1px solid black;
+    padding:2px;
+    background: #f2f;
+    border-radius: 20px;
+  
+  
+  
+  }
+  button[type="submit"]{
+    width:90%;
+    border-radius:20px;
+    padding:10px;
+    margin:5px;
+    font-size:20px;
+    border:none;
+  }
+  input[type="text"],
+  input[type="password"]{
+    border-radius:20px;
+    padding:10px;
+    margin:5px;
+    font-size:20px ;
+    border:2px;
+    
+    
+  }
+  body{
+  
+
+  text-align:center;
+
+  }
+  remember me{
+    justify-content:space-between;
+  }
+  h1{
+    font-size:50px;
+    color: white ;
+  }
+  p{
+    color: white ;
+  }
+  .am{
+    color: white ;
+  }
+    
+  </style>
+
+</head>
+
+<body>
+  <div class="abc">
+  <h1>Login</h1>
+  <input type="text" id="username" placeholder="Username" required>
+  <br><br>
+  <input type="password" id="password"
+  placeholder="Password" required>
+  <br><br>
+  <div class="am">
+  <input type="checkbox" id="am">Remember me
+
+  <a href="#">Forgot password</a>
+  <br><br>
+  <button type="submit" id="loginbtn">Login</button>
+  <p>Don't have in account? <a href="#">Register</a></p>
+  </div>
+  <!--java script -->
+  <script>
+let username = document.getElementById("username");
+let password = document.getElementById("password");
+let loginBtn = document.getElementById("loginbtn");
+
+loginBtn.addEventListener("click", function() {
+
+    if (username.value === "") {
+        alert("Username enter karo");
+    }
+    else if (password.value === "") {
+        alert("Password enter karo");
+    }
+    else {
+    if (username.value === "Aman" && password.value === "1234") {
+        window.location.href = "index 2 .html";
+    } else {
+        alert("Wrong Username or Password");
+    }
+}
+    
+
+});
+
+    
+  </script>
+</body>
+
+</html>
